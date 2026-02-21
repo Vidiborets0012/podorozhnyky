@@ -1,4 +1,4 @@
-@import "modern-normalize/modern-normalize.css";
+@import 'modern-normalize/modern-normalize.css';
 
 /* Base reset */
 h1,
@@ -38,6 +38,12 @@ img {
 
 address {
   font-style: normal;
+}
+
+/* глобальні */
+
+body {
+  font-family: var(--font-nunito), sans-serif;
 }
 
 /* *,

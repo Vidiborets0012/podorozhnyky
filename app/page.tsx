@@ -1,6 +1,7 @@
 // # /
 
-import { Container } from "@/components/ui/Container/Container";
+import css from './page.module.css';
+import { Container } from '@/components/ui/Container/Container';
 
 export default function Home() {
   // return <div>Home</div>;
@@ -17,11 +18,13 @@ export default function Home() {
   // );
   //*** */
   return (
-    <section style={{ background: "#f4f4f4", padding: "60px 0" }}>
+    <section style={{ background: '#f4f4f4', padding: '60px 0' }}>
       <Container>
-        <h1>Проект, створений для тих, хто живе подорожами</h1>
+        <h1 className={css.title}>
+          Проект, створений для тих, хто живе подорожами
+        </h1>
 
-        <p style={{ marginTop: "20px", maxWidth: "600px" }}>
+        <p style={{ marginTop: '20px', maxWidth: '600px' }}>
           Ми віримо, що кожна подорож — це унікальна історія, варта того, щоб
           нею поділилися. Наша платформа створена, щоб об&apos;єднати людей,
           закоханих у відкриття нового.

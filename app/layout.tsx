@@ -1,17 +1,23 @@
 // import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
-import { Container } from "@/components/ui/Container/Container";
-import "./globals.css";
+import { Nunito_Sans, Sora } from 'next/font/google';
+import { Container } from '@/components/ui/Container/Container';
+import './globals.css';
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+const nunito = Nunito_Sans({
+  subsets: ['latin', 'cyrillic'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-nunito',
+  display: 'swap',
+});
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const sora = Sora({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-sora',
+  display: 'swap',
+});
+// Шрифт Sora НЕ підтримує кирилицю в Google Fonts
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -29,7 +35,7 @@ export default function RootLayout({
     //     {children}
     //   </body>
     // </html>
-    <html lang="en">
+    <html lang="uk" className={`${nunito.variable} ${sora.variable}`}>
       <body>
         <header>
           <Container>
