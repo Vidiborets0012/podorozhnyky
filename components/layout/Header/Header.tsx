@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container/Container';
+import Logo from '@/components/ui/Logo/Logo';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -12,9 +13,10 @@ export default function Header() {
       <Container>
         <div className={styles.inner}>
           {/* Logo */}
-          <Link href="/" className={styles.logo}>
+          {/* <Link href="/" className={styles.logo}>
             🌿 Подорожники
-          </Link>
+          </Link> */}
+          <Logo />
 
           {/* Navigation */}
           <nav className={styles.nav}>
