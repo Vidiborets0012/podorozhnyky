@@ -1,8 +1,7 @@
-// import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import { Nunito_Sans, Sora } from 'next/font/google';
-import { Container } from '@/components/ui/Container/Container';
 import './globals.css';
+import Header from '@/components/layout/Header/Header';
+import Footer from '@/components/layout/Footer/Footer';
 
 const nunito = Nunito_Sans({
   subsets: ['latin', 'cyrillic'],
@@ -30,24 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // <html lang="en">
-    //   <body className={`${geistSans.variable} ${geistMono.variable}`}>
-    //     {children}
-    //   </body>
-    // </html>
     <html lang="uk" className={`${nunito.variable} ${sora.variable}`}>
       <body>
-        <header>
-          <Container>
-            <h1>HEADER</h1>
-          </Container>
-        </header>
+        <Header />
         <main>{children}</main>
-        <footer>
-          <Container>
-            <h1>FOOTER</h1>
-          </Container>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
