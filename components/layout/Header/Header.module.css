@@ -1,10 +1,17 @@
 .header {
   padding: 16px 0;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: dodgerblue;
 }
 
-.inner {
+.headerInner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.headerContet {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }

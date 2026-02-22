@@ -1,7 +1,7 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 3px;
 }
 
 .logo svg {
@@ -10,7 +10,7 @@
 }
 
 .text {
-  font-family: var(--font-sora);
+  font-family: var(--font-nunito);
   font-weight: 400;
   font-size: 17px;
   line-height: 1.1;
