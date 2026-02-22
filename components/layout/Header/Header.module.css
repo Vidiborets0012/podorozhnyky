@@ -2,6 +2,9 @@
   padding: 16px 0;
   /* background-color: transparent; */
   background-color: dodgerblue;
+  /* --logo-text-color: #fff; */
+  color: #fff;
+  /* --nav-text-color: #fff; */
 }
 
 .headerInner {

@@ -45,6 +45,7 @@ address {
 body {
   font-family: var(--font-nunito), sans-serif;
   background-color: #f7f9ff;
+  color: #000;
 }
 
 /* *,

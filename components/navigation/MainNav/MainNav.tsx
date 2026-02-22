@@ -6,13 +6,19 @@ export function MainNav() {
     <nav className={styles.nav}>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <Link href="/">Головна</Link>
+          <Link href="/" className={styles.navLink}>
+            Головна
+          </Link>
         </li>
         <li className={styles.navItem}>
-          <Link href="/stories">Історії</Link>
+          <Link href="/stories" className={styles.navLink}>
+            Історії
+          </Link>
         </li>
         <li className={styles.navItem}>
-          <Link href="/travelers">Мандрівники</Link>
+          <Link href="/travelers" className={styles.navLink}>
+            Мандрівники
+          </Link>
         </li>
       </ul>
     </nav>
