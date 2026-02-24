@@ -1,0 +1,47 @@
+.section {
+  padding: 80px 0;
+  background-color: #f8faff; /* Дуже світлий фон, як на макеті */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Контейнер для кнопки "Переглянути всі" */
+.buttonWrapper {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Синя кнопка з макета */
+.viewAllBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #4c75ea; /* Насичений синій з Screenshot_4 */
+  color: #ffffff;
+
+  padding: 12px 32px;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  box-shadow: 0 4px 14px rgba(76, 117, 234, 0.3);
+}
+
+.viewAllBtn:hover {
+  background-color: #3b5ecf;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 117, 234, 0.4);
+}
+
+.viewAllBtn:active {
+  transform: translateY(0);
+}

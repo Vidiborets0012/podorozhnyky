@@ -1,0 +1,44 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.title {
+  font-family: 'Inter', sans-serif; /* Або ваш основний шрифт */
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.storiesList {
+  display: grid;
+  /* Створюємо 3 рівні колонки за макетом */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Адаптивність для планшетів та мобільних пристроїв */
+@media (max-width: 1024px) {
+  .storiesList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .storiesList {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
