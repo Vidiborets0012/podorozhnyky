@@ -5,8 +5,8 @@ export interface Story {
   article: string;
   date: string;
   favoriteCount: number;
-  category?: { _id: string; name: string } | string;
-  ownerId?: { _id: string; name: string; avatarUrl?: string } | string;
+  category?: { _id: string; name: string };
+  ownerId?: { _id: string; name: string; avatarUrl?: string };
   isSaved?: boolean;
 }
 
@@ -19,4 +19,11 @@ export interface StoriesResponse {
     limit: number;
     totalPages: number;
   };
+}
+
+// інтерфейс для детальної відповіді історії
+export interface StoryDetailResponse {
+  data: Story;
+  isSaved: boolean;
+  popularStories: Story[];
 }
