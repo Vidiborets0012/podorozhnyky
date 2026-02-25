@@ -2,12 +2,17 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import styles from './AuthActions.module.css';
 
-export function AuthActions() {
+interface AuthActionsProps {
+  onItemClick?: () => void;
+}
+
+export const AuthActions = ({ onItemClick }: AuthActionsProps) => {
   return (
     <ul className={styles.actionsList}>
       <li className={styles.actionsItem}>
         <Link
           href="/auth/login"
+          onClick={onItemClick}
           className={clsx(styles.actionsLink, styles.transparent)}
         >
           Вхід
@@ -16,6 +21,7 @@ export function AuthActions() {
       <li className={styles.actionsItem}>
         <Link
           href="/auth/register"
+          onClick={onItemClick}
           className={clsx(styles.actionsLink, styles.white)}
         >
           Реєстрація
@@ -23,4 +29,4 @@ export function AuthActions() {
       </li>
     </ul>
   );
-}
+};
