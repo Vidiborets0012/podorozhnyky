@@ -10,12 +10,12 @@ const nunito = Nunito_Sans({
   display: 'swap',
 });
 
-const sora = Sora({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-sora',
-  display: 'swap',
-});
+// const sora = Sora({
+//   subsets: ['latin'],
+//   weight: ['400', '700'],
+//   variable: '--font-sora',
+//   display: 'swap',
+// });
 // Шрифт Sora НЕ підтримує кирилицю в Google Fonts
 
 // export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk" className={`${nunito.variable} ${sora.variable}`}>
+    <html lang="uk" className={`${nunito.variable}`}>
       <body>
         <Header />
         <main>{children}</main>
