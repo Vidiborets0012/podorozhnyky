@@ -14,9 +14,17 @@
   transform: translateY(-4px);
 }
 
-.mainImage {
+.imageWrapper {
+  position: relative; /* Обов'язково для fill */
   width: 100%;
-  height: 240px;
+  height: 250px; /* Або інша фіксована висота */
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.mainImage {
+  /* width: 100%;
+  height: 240px; */
   object-fit: cover;
 }
 
@@ -42,7 +50,8 @@
   margin-bottom: 12px;
   /* Обрізка заголовка до 2 рядків */
   display: -webkit-box;
-  /* -webkit-line-clamp: 2; */
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -54,7 +63,8 @@
   margin-bottom: 20px;
   /* Обрізка тексту до 3 рядків, як у ТЗ */
   display: -webkit-box;
-  /* -webkit-line-clamp: 3; */
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
