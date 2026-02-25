@@ -40,4 +40,4 @@ const fetchStories = async (params = {}): Promise<Story[]> => {
 // Семантичні іменовані експорти (API functions)
 // Саме ці функції будуть викликатися в компонентах
 export const getPopularStories = () =>
-  fetchStories({ limit: 3, sortBy: 'popular' });
+  fetchStories({ limit: 4, sortBy: 'popular' });

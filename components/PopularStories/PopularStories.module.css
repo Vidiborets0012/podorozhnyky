@@ -1,8 +1,8 @@
-.container {
+/* .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-}
+} */
 
 .title {
   font-family: 'Inter', sans-serif; /* Або ваш основний шрифт */
@@ -15,30 +15,53 @@
 }
 
 .storiesList {
-  display: grid;
-  /* Створюємо 3 рівні колонки за макетом */
-  grid-template-columns: repeat(3, 1fr);
+  display: flex; /* Переходимо на флекси */
+  flex-wrap: wrap;
   gap: 24px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Адаптивність для планшетів та мобільних пристроїв */
-@media (max-width: 1024px) {
-  .storiesList {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.listItem {
+  flex-grow: 0;
+  flex-shrink: 0;
+  /* Розрахунок для 3 карток на мобайлі (якщо вони в ряд) */
+  flex-basis: calc((100% - (2 * 20px)) / 3);
 }
 
-@media (max-width: 768px) {
-  .storiesList {
-    grid-template-columns: 1fr;
-    gap: 20px;
+/* Приховуємо 4-ту картку за замовчуванням (бо на мобайлі треба 3) */
+.listItem:nth-child(n + 4) {
+  display: none;
+}
+
+/* Tablet (768px - 1439px): 4 картки в ряд */
+@media (min-width: 768px) {
+  .listItem {
+    /* Змінюємо ширину на 4 в ряд */
+    flex-basis: calc((100% - (3 * 24px)) / 4);
+  }
+
+  /* Показуємо 4-ту картку, яка була прихована на мобайлі */
+  .listItem:nth-child(4) {
+    display: block;
   }
 
   .title {
     font-size: 24px;
     margin-bottom: 24px;
+  }
+}
+
+/* DESKTOP (від 1440px): 3 картки в ряд */
+@media (min-width: 1440px) {
+  .listItem {
+    /* Повертаємо 3 в ряд (вони стануть більшими) */
+    flex-basis: calc((100% - (2 * 24px)) / 3);
+  }
+
+  /* Знову приховуємо 4-ту картку, щоб залишилося рівно 3 */
+  .listItem:nth-child(4) {
+    display: none;
   }
 }
