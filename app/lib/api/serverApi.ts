@@ -1,3 +1,4 @@
+import { StoriesResponse, Story } from '@/app/types/story';
 import api from './api';
 
 // interface StoriesResponse {
@@ -22,9 +23,18 @@ import api from './api';
 
 // Базова універсальна функція (Utility function)
 // не експортуємо, вона потрібна тільки всередині цього файлу
-const fetchStories = async (params = {}) => {
-  const { data } = await api.get('/stories', { params });
-  return data.data;
+const fetchStories = async (params = {}): Promise<Story[]> => {
+  try {
+    // Очікуємо відповідь у форматі StoriesResponse
+    const { data } = await api.get<StoriesResponse>('/stories', {
+      params,
+      timeout: 10000,
+    });
+    return data.data;
+  } catch (error) {
+    console.error('Бекенд тимчасово недоступний (502/500)');
+    return []; // Повертаємо порожній масив, щоб сторінка завантажилася без карток
+  }
 };
 
 // Семантичні іменовані експорти (API functions)

@@ -4,8 +4,9 @@ import css from './page.module.css';
 import { Container } from '@/components/ui/Container/Container';
 
 //*** */
-import { getPopularStories } from '@/services/stories-api';
+// import { getPopularStories } from '';
 import PopularStoriesSection from '@/components/PopularStories/PopularStoriesSection/PopularStoriesSection';
+import { getPopularStories } from './lib/api/serverApi';
 
 export default async function Home() {
   // 1. Отримуємо відсортовані історії (топ-3 за популярністю)

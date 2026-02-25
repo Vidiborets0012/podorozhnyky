@@ -9,3 +9,14 @@ export interface Story {
   ownerId?: { _id: string; name: string; avatarUrl?: string } | string;
   isSaved?: boolean;
 }
+
+// Типізуємо саму відповідь сервера
+export interface StoriesResponse {
+  data: Story[];
+  pagination: {
+    total: number;
+    page: number;
+    limit: number;
+    totalPages: number;
+  };
+}
