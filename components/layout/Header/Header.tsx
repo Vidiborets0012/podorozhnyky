@@ -38,11 +38,14 @@ export default function Header() {
           </div>
           {/* Кнопка бургер-меню (видима тільки на мобайл/таблет) */}
           <button
-            className={styles.burgerBtn}
+            className={`${styles.burgerBtn} ${isMenuOpen ? styles.active : ''}`}
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? '✕' : '☰'} {/* Можна замінити на SVG іконки */}
+            <span className={styles.burgerLine}></span>
+            <span className={styles.burgerLine}></span>
+            <span className={styles.burgerLine}></span>
+            {/* {isMenuOpen ? '✕' : '☰'} Можна замінити на SVG іконки */}
           </button>
         </div>
       </Container>

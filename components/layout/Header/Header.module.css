@@ -13,8 +13,97 @@
   align-items: center;
 }
 
-.headerContet {
-  display: flex;
+.headerContent {
+  /* display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 32px; */
+  /* За замовчуванням (для мобілок) меню приховане і випливає на весь екран */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9); /* Темний фон для меню за ТЗ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%); /* Сховано вгору */
+  z-index: 100;
+}
+
+.headerContent.isOpen {
+  transform: translateY(0); /* З'являється при кліку на бургер */
+}
+
+.burgerBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101; /* Поверх оверлея меню */
+}
+
+.burgerLine {
+  width: 30px;
+  height: 2px;
+  background-color: #fff; /* Білий колір як на скріншотах */
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: left center;
+}
+
+/* Анімація перетворення в хрестик */
+.burgerBtn.active .burgerLine:nth-child(1) {
+  transform: rotate(45deg) translate(-2px, -3px);
+}
+
+.burgerBtn.active .burgerLine:nth-child(2) {
+  opacity: 0;
+  /* transform: translateX(10px); */
+}
+
+.burgerBtn.active .burgerLine:nth-child(3) {
+  transform: rotate(-45deg) translate(2px, 3px);
+}
+
+/* Додаємо проміжний стан для таблета */
+@media (min-width: 768px) {
+  .headerInner {
+    gap: 20px;
+    padding: 0;
+  }
+
+  /* На таблеті ми можемо захотіти показати AuthActions (кнопки), 
+     але MainNav залишити в бургері */
+  /* .headerContent {
+    Все ще оверлей, АЛЕ на планшеті ми можемо змінити його поведінку, 
+       якщо кнопки авторизації мають бути зовні
+  } */
+}
+/* Для десктопу (1440px) повертаємо все у звичайний ряд */
+@media (min-width: 1440px) {
+  .headerContent {
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    background-color: transparent;
+    transform: none;
+    gap: 32px;
+    display: flex; /* Повертаємо видимість */
+  }
+
+  .burgerBtn {
+    display: none;
+  }
 }
