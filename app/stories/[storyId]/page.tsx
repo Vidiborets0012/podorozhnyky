@@ -24,22 +24,24 @@ export default async function StoryPage({ params }: Props) {
   if (!story) {
     return (
       <div className={styles.pageWrapper}>
-        <Container>
+        {/* <Container> */}
+        <div className="container">
           <p>Вибачте, історію не знайдено або бекенд тимчасово недоступний.</p>
-        </Container>
+        </div>
+        {/* </Container> */}
       </div>
     );
   }
   // console.log('RENDER DATA:', story);
   return (
     <div className={styles.pageWrapper}>
-      <section className={styles.detailsSection}>
-        <Container>
-          // Передаємо story.data, бо саме там лежать title, img, article
-          {/* <StoryDetails story={story} isSaved={isSaved} /> */}
-          <StoryDetails story={story.data} isSaved={story.isSaved} />
-        </Container>
-      </section>
+      {/* <section className={styles.detailsSection}> */}
+      {/* <Container> */}
+      {/* Передаємо story.data, бо саме там лежать title, img, article */}
+      {/* <StoryDetails story={story} isSaved={isSaved} /> */}
+      <StoryDetails story={story.data} isSaved={story.isSaved} />
+      {/* </Container> */}
+      {/* </section> */}
 
       <section className={styles.popularSection}>
         <Container>

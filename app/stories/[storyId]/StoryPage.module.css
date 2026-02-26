@@ -1,18 +1,21 @@
 .pageWrapper {
-  /* Відступ від Хедера та до Футера */
-  padding-top: 40px;
-  padding-bottom: 80px;
-
-  /* Flexbox допоможе легко керувати відступом між секціями */
+  padding-top: 32px;
+  padding-bottom: 64px;
   display: flex;
   flex-direction: column;
-  gap: 80px; /* Великий відступ між StoryDetails та Popular за макетом */
+  gap: 64px;
 }
 
-/* На мобільних пристроях відступ можна зменшити */
-@media (max-width: 767px) {
+@media only screen and (min-width: 768px) {
+  /* .pageWrapper {
+    padding-top: 32px;
+  } */
+}
+
+@media only screen and (min-width: 1440px) {
   .pageWrapper {
-    gap: 48px;
-    padding-top: 24px;
+    gap: 72px;
+    padding-top: 48px;
+    padding-bottom: 72px;
   }
 }
