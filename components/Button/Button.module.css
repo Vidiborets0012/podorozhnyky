@@ -2,11 +2,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
 
   border-radius: var(--btn-radius);
   border-width: var(--btn-border-width);
   border-style: var(--btn-border-style);
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
 
   cursor: pointer;
   transition: all 0.2s ease;

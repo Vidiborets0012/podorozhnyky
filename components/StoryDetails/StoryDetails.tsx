@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './StoryDetails.module.css';
 import { Story } from '@/app/types/story';
+import Button from '@/components/Button/Button';
 
 interface StoryDetailsProps {
   story: Story;
@@ -60,11 +61,12 @@ export default function StoryDetails({ story, isSaved }: StoryDetailsProps) {
                 Вона буде доступна у вашому профілі у розділі збережене
               </p>
               {/* Кнопка — тут буде логіка запиту */}
-              <button
+              <Button variant="primary">Зберегти</Button>
+              {/* <button
                 className={`${styles.saveButton} ${isSaved ? styles.saved : ''}`}
               >
                 {isSaved ? 'Збережено' : 'Зберегти'}
-              </button>
+              </button> */}
             </div>
           </aside>
         </div>
