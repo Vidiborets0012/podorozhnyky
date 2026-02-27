@@ -61,7 +61,9 @@ export default function StoryDetails({ story, isSaved }: StoryDetailsProps) {
                 Вона буде доступна у вашому профілі у розділі збережене
               </p>
               {/* Кнопка — тут буде логіка запиту */}
-              <Button variant="primary">Зберегти</Button>
+              <Button type="button" variant="primary">
+                Зберегти
+              </Button>
               {/* <button
                 className={`${styles.saveButton} ${isSaved ? styles.saved : ''}`}
               >
