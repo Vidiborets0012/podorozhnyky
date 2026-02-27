@@ -1,5 +1,14 @@
 @import 'modern-normalize/modern-normalize.css';
-
+:root {
+  --color-neutral-darkest: #000;
+  --color-white: #fff;
+  --opacity-transparent: rgba(255, 255, 255, 0);
+  --opacity-white-5: rgba(255, 255, 255, 0.05);
+  --opacity-neutral-darkest-5: rgba(0, 0, 0, 0.05);
+  --opacity-white-15: rgba(255, 255, 255, 0.15);
+  --color-neutral-lightest: #f2f2f2;
+  --color-royal-blue: #4169e1;
+}
 /* Base reset */
 h1,
 h2,

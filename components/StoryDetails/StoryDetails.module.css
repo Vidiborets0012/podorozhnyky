@@ -52,9 +52,9 @@
   font-weight: 600;
   font-size: 12px;
   line-height: 1.5;
-  border: 1px solid rgba(255, 255, 255, 0);
+  border: 1px solid var(--opacity-transparent);
   border-radius: 6px;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--opacity-white-5);
 }
 
 .imageWrapper {
@@ -79,15 +79,14 @@
 .textBlock {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: #333;
   white-space: pre-line; /* Зберігає абзаци тексту */
 }
 
 .saveAside {
   padding: 32px 20px;
-  border: 0px solid rgba(0, 0, 0, 0.15);
+  border: 0px solid var(--opacity-white-15);
   border-radius: 24px;
-  background-color: #f2f2f2;
+  background-color: var(--color-neutral-lightest);
 }
 
 .saveCard {
@@ -109,10 +108,10 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  color: #fff;
-  border: 1px solid #4169e1;
+  color: var(--color-white);
+  border: 1px solid var(--color-royal-blue);
   border-radius: 8px;
-  background-color: #4169e1;
+  background-color: var(--color-royal-blue);
   cursor: pointer;
 }
 
@@ -133,10 +132,6 @@
     flex-direction: row;
     row-gap: 0;
     column-gap: 48px;
-  }
-
-  .textBlock {
-    color: #000;
   }
 
   .saveAside {
