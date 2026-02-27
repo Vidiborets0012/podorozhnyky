@@ -14,7 +14,7 @@ export default function StoryDetails({ story, isSaved }: StoryDetailsProps) {
     <article className={styles.article}>
       <div className="container">
         {/* 1. Заголовок історії */}
-        <h2 className={styles.title}>{story.title}</h2>
+        <h1 className={styles.title}>{story.title}</h1>
 
         {/* 2. Мета-дані: Автор, Дата, Країна */}
         <div className={styles.meta}>
@@ -53,7 +53,7 @@ export default function StoryDetails({ story, isSaved }: StoryDetailsProps) {
         <div className={styles.contentGrid}>
           <div className={styles.textBlock}>{story.article}</div>
 
-          <div className={styles.saveAside}>
+          <aside className={styles.saveAside}>
             <div className={styles.saveCard}>
               <p className={styles.saveTitle}>Збережіть собі історію</p>
               <p className={styles.saveText}>
@@ -66,7 +66,7 @@ export default function StoryDetails({ story, isSaved }: StoryDetailsProps) {
                 {isSaved ? 'Збережено' : 'Зберегти'}
               </button>
             </div>
-          </div>
+          </aside>
         </div>
       </div>
     </article>

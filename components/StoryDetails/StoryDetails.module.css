@@ -1,4 +1,7 @@
 /* StoryDetails.module.css */
+.article {
+  padding-top: 32px;
+}
 
 .title {
   margin-bottom: 32px;
@@ -70,7 +73,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-top: 32px;
+  padding: 32px 0;
 }
 
 .textBlock {
@@ -142,6 +145,10 @@
   }
 }
 @media only screen and (min-width: 1440px) {
+  .article {
+    padding-top: 48px;
+  }
+
   .title {
     font-size: 56px;
   }
@@ -154,7 +161,7 @@
     display: flex;
     flex-direction: row;
     gap: 24px;
-    padding-top: 48px;
+    padding: 48px 0;
   }
 
   .saveAside {

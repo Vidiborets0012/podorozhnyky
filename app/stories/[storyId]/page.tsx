@@ -7,7 +7,6 @@ import { getStoryById } from '@/app/lib/api/serverApi';
 // import { getTopStoriesServer } from '@/app/lib/api/anotherDevApi'; // припустимий шлях до функцій
 // import PopularStories from '@/components/PopularStories;
 import StoryDetails from '@/components/StoryDetails/StoryDetails';
-import styles from './StoryPage.module.css';
 
 interface Props {
   params: { storyId: string };
@@ -44,16 +43,16 @@ export default async function StoryPage({ params }: Props) {
   // 3. Перевірка наявності основної історії
   if (!storyRes.story || !storyRes.story.data) {
     return (
-      <div className={styles.pageWrapper}>
+      <>
         <div className="container">
           <p>Вибачте, історію не знайдено або сервер недоступний.</p>
         </div>
-      </div>
+      </>
     );
   }
   // console.log('RENDER DATA:', story);
   return (
-    <div className={styles.pageWrapper}>
+    <>
       {/* компонент детальної сторінки */}
       <StoryDetails story={storyRes.story.data} isSaved={storyRes.isSaved} />
       {/* <StoryDetails story={story.data} isSaved={story.isSaved} /> */}
@@ -66,6 +65,6 @@ export default async function StoryPage({ params }: Props) {
           <PopularStoriesSection stories={popularStories} />
         </Container>
       </section> */}
-    </div>
+    </>
   );
 }
